@@ -1,0 +1,131 @@
+ <style> .grid-container { display: grid; /* Определяем количество колонок и промежутков между ними */ 
+ 	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); gap: 20px; /* Отступы между ячейками */ position: relative;} 
+ 	.grid-item { max-height:14vh  ;   position: relative; background-color: #32cd32; padding: 20px;
+     text-align: center; font-size: 20px; color: #333; height:14vh;  position: relative;  }
+ 	.text { background-color: #00e65c; padding: 20px; text-align: center; font-size: 20px; color: #333; height:6vh; position: relative;}
+    .image_gerb {object-fit: cover; max-height:100%; max-width:100%; min-height: 40%; min-width: 40%; display: block;}
+    .div_gerb{position: absolute; left: 10%;  width: 10%; height: 80%;}
+    .medcollege {height: fit-content; width: fit-content;position: absolute; top:20%;left:35%; font-size:4vw;   /*margin-right:0%; margin-left:0%;margin-bottom:0%;margin-top:-7%;*/ ; font-family: "Snell Roundhand"; white-space: nowrap;}
+    .O_kollege {position: absolute; left: 20%; bottom:40%;font-size: 2vw;  }
+    .specialnost {position: absolute; left: 37%; bottom:40%;font-size: 2vw;}
+    .student {position: absolute; left: 60%; bottom:40%;font-size: 2vw;}
+    .Abiturient {position: absolute; left: 80%; bottom:40%;font-size: 2vw;}
+ 	.content{ background-color: #66ff00; padding: 20px; text-align: center; font-size: 20px; color: #333; height:67vh;position: relative; }
+    .container_LD {position: absolute;  width: 30%; height: 40%; border: 1px solid white; /*margin-right: 40%; margin-left:10%;*/ max-width: 100%; top: 8%; left: 10%}
+    .container_SD {position: absolute; bottom: 30%; top: 8%; right: 10%; width: 30%; height: 43%; border: 1px solid white; /*margin-right: 20%; margin-left:80%; margin-bottom: 20%; margin-top: -14%;margin-left:70%*/;}
+    .container_ST {position: absolute; bottom:4%; left: 10%; width: 30%; height: 43%; border: 1px solid white; /*margin-right: 40%; margin-left:10%; margin-bottom: 20%; margin-top: -15%;*/}
+    .container_FM {position: absolute; bottom:4%;right:10%;width: 30%; height: 43%; border: 1px solid black; /*margin-right: 30%; margin-left:70%; margin-bottom: 0%; margin-top: -34%; max-width:100%*/}
+   .image_LD {object-fit: cover; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;}
+    .image_SD {object-fit: cover; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;}
+    .image_ST {object-fit: cover; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;}
+    .image_FM {object-fit: contain; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;}
+ 	.basement {position: relative; background-color: #32cd32; padding: 20px; text-align: center; font-size: 20px; color: #333; height:10.6vh; }
+    .gerb_basement {position: absolute;  object-fit: contain; border: 1px solid white; bottom: 10%; width: 12%; height: 80%; left: 20%;}
+    .stranica_basement {position: absolute; left: 45%; bottom:10%;
+        font-size: 1.1vw; width: 30%; text-align: left; height: fit-content; width: fit-content }
+ 	.contact_basement {position: absolute; right:30%; border: 1px solid white;
+     bottom:5%;font-size: 1.1vw; width: 10%; height: 30%; text-align: left; height: fit-content; width: fit-content }
+ 	
+ 	 /*Студенту*/
+    .container_LK {position: absolute;  width: 30%; height: 40%; border: 1px solid white;  max-width: 100%; top: 8%; left: 10%}
+    .container_SM {position: absolute; bottom: 30%; top: 8%; right: 10%; width: 30%; height: 43%; border: 1px solid white; }
+    .container_RZ {position: absolute; bottom:4%; left: 10%; width: 30%; height: 43%; border: 1px solid white; }
+    .container_Dekanat {position: absolute; bottom:4%;right:10%;width: 30%; height: 43%; border: 1px solid black; }
+    
+    .image_LK {object-fit: contain; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%}
+    .image_SM {object-fit: contain; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%}
+    .image_RZ {object-fit: contain; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%}
+    .image_Dekanat {object-fit: contain; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%}
+   /*Функциональное */
+   .link{text-decoration:none;color: black;}
+   .chat{position: absolute;  object-fit: contain; border: 1px solid white; bottom: 5%; width: 12%; height: 50%; right: 10%;}
+   .btn {
+  outline:none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background: none;
+  object-fit: cover; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;
+  
+}
+
+.btn:hover {
+  box-shadow:none;
+  top: 2px;
+  object-fit: cover; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 6px;
+  object-fit: cover; max-height:100%; max-width:100%; display: block; min-width: 70%; min-height: 70%;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  
+}
+
+/* Всплывающий чат - скрыт по умолчанию */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  position: absolute;  object-fit: contain; border: 1px solid white; bottom: 5%; width: 12%; height: 50%; right: 10%;
+}
+
+/* Добавление стилей в контейнер формы */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Полноразмерная текстовая область */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* Когда текстовая область получит фокус, сделайте что-нибудь */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/кнопка */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Добавьте красный цвет фона к кнопке отмена */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Добавьте некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+  </style>
